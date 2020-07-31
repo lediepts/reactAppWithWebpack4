@@ -5,5 +5,5 @@ How to use:
 install
 >yarn&&yarn dev
 
-Automatic open brower
+Automatic open browser
 >http://localhost:9000
