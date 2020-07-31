@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'EBGaramond';
+    src: local('EBGaramond'), url("../../fonts/EBGaramond.ttf") format('opentype');
+}
+body{
+    margin: 0;
+    background-color: rgb(140, 255, 201);
+    background-image: url("../../images/img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: "EBGaramond";
+}
