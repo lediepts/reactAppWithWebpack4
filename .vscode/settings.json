@@ -3,7 +3,8 @@
         "Entrypoint",
         "esnext",
         "noopener",
-        "noreferrer"
+        "noreferrer",
+        "opentype"
     ],
     "files.trimTrailingWhitespace": true,
     "explorer.confirmDragAndDrop": false,
@@ -28,7 +29,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[jsonc]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "files.associations": {
         "*.js": "javascript"
