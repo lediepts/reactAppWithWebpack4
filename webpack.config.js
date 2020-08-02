@@ -4,7 +4,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpack = require("webpack");
 
-const VENDOR = ["axios", "react", "react-dom", "react-router-dom"];
+const VENDOR = [
+	"axios",
+	"react",
+	"react-dom",
+	"react-router-dom",
+    "react-redux",
+    "redux",
+    "redux-logger",
+    "redux-saga"
+];
 
 module.exports = {
 	mode: "development",
@@ -19,7 +28,8 @@ module.exports = {
 		open: true,
 		overlay: true,
 		inline: true,
-		stats: "minimal",
+        stats: "minimal",
+        historyApiFallback: true,
 	},
 	output: {
 		path: path.join(__dirname, "/dist"),
@@ -34,7 +44,7 @@ module.exports = {
 			{
 				test: /\.(ts|js)x?$/,
 				exclude: /node_modules/,
-				use: "babel-loader",
+				use: "babel-loader"
 			},
 			{
 				test: /\.s[ac]ss$/i,
@@ -49,10 +59,14 @@ module.exports = {
 			},
 			{
 				loader: "file-loader",
-				test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.txt$|\.ico$/i,
+				test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.txt$/i,
 				options: {
 					outputPath: "assets/images",
 				},
+			},
+			{
+				loader: "file-loader",
+				test: /\.ico$/i
 			},
 			{
 				loader: "file-loader",
@@ -101,7 +115,9 @@ module.exports = {
 		new webpack.ProgressPlugin(),
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
-			template: "./src/index.html",
+            template: "./src/index.html",
+            favicon: './src/favicon.ico',
+            filename: "./index.html"
 		}),
 	],
 	performance: {
