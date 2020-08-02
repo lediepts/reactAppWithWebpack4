@@ -8,11 +8,11 @@ export default function NotFound() {
 			<div
 				style={{
 					display: "block",
-					padding: "50px auto",
-					background: "rgba(255,255,255,0.4)",
+					padding: "150px auto",
+					textAlign: "center",
 				}}
 			>
-				<h2 style={{ display: "inlineBlock", paddingTop: "25px" }}>
+				<h2 style={{ display: "inlineBlock", paddingTop: "100px" }}>
 					お探しのページが見つかりませんでした。
 				</h2>
 				<br />
@@ -21,6 +21,9 @@ export default function NotFound() {
 				</p>
 				<div>
 					<button
+						style={{
+							marginTop: 30 ,
+						}}
 						onClick={() => {
 							history.push("/");
 						}}

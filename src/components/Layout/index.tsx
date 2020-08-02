@@ -1,9 +1,13 @@
 import React from "react";
-
+import "./style.scss";
 interface IProps {
 	children?: React.ReactElement;
 }
 
 export default function layoutComponent({ children }: IProps) {
-	return <div>{children}</div>;
+	return (
+		<div className="rootPage">
+			{children}
+		</div>
+	);
 }

@@ -4,13 +4,22 @@
 		url("../../fonts/EBGaramond.ttf") format("opentype");
 }
 body {
-	margin: 0;
-	background-color: rgb(140, 255, 201);
-	background-image: url("../../images/img1.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	min-width: 100vw;
-	min-height: 100vh;
-	font-family: "EBGaramond";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    content: "";
+    font-size: 1em;
+    font-family: "EBGaramond";
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+::selection, code::selection {
+    text-shadow: none;
+    background: #4c8ae7;
+    color: white;
 }
