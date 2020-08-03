@@ -11,7 +11,7 @@ interface IProps {
 	}[];
 }
 
-function App({ pages = [] }: IProps) {
+function App({ pages }: IProps) {
 	return (
 		<Suspense fallback={<div>...Loading!</div>}>
 			<LayoutComponent>
